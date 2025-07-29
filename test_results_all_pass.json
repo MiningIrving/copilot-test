@@ -1,0 +1,233 @@
+{
+  "operator_results": [
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "shape_(1, 16, 128)_eps_1e-06",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        128
+      ],
+      "mse": 6.320867829145982e-09,
+      "max_abs_error": 0.00048828125,
+      "mean_abs_error": 2.973078517243266e-05,
+      "cosine_similarity": 0.9999998807907104,
+      "relative_error": 7.991421418100242e-05,
+      "pass_threshold": true,
+      "execution_time_python": 0.0002803802490234375,
+      "execution_time_cpp": 0.00022430419921875002,
+      "error_message": null
+    },
+    {
+      "operator_name": "Attention",
+      "test_case": "b1_s16_h128_nh8_nkv2",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        128
+      ],
+      "mse": 9.610616302779817e-09,
+      "max_abs_error": 0.000370025634765625,
+      "mean_abs_error": 7.745772018097341e-05,
+      "cosine_similarity": 0.9999954700469971,
+      "relative_error": 0.002969688923159444,
+      "pass_threshold": true,
+      "execution_time_python": 0.0007712841033935547,
+      "execution_time_cpp": 0.0005398988723754883,
+      "error_message": null
+    },
+    {
+      "operator_name": "MLP",
+      "test_case": "b1_s16_h128_i512",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        128
+      ],
+      "mse": 9.820234903035185e-13,
+      "max_abs_error": 3.7550926208496094e-06,
+      "mean_abs_error": 7.848720997571945e-07,
+      "cosine_similarity": 0.9951858520507812,
+      "relative_error": 0.09847494504297825,
+      "pass_threshold": false,
+      "execution_time_python": 0.0004975795745849609,
+      "execution_time_cpp": 0.0002985477447509766,
+      "error_message": null
+    },
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "shape_(1, 32, 2048)_eps_1e-06",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "mse": 5.788618473445695e-09,
+      "max_abs_error": 0.00048828125,
+      "mean_abs_error": 2.7936152037000284e-05,
+      "cosine_similarity": 0.9999973773956299,
+      "relative_error": 7.631323660584974e-05,
+      "pass_threshold": true,
+      "execution_time_python": 0.00024890899658203125,
+      "execution_time_cpp": 0.000199127197265625,
+      "error_message": null
+    },
+    {
+      "operator_name": "Attention",
+      "test_case": "b1_s32_h2048_nh16_nkv16",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "mse": 9.938174727608384e-09,
+      "max_abs_error": 0.00038909912109375,
+      "mean_abs_error": 7.94633524492383e-05,
+      "cosine_similarity": 0.9999122023582458,
+      "relative_error": 0.013014156845076567,
+      "pass_threshold": false,
+      "execution_time_python": 0.04686307907104492,
+      "execution_time_cpp": 0.03280415534973145,
+      "error_message": null
+    },
+    {
+      "operator_name": "MLP",
+      "test_case": "b1_s32_h2048_i11008",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "mse": 9.988069399335942e-13,
+      "max_abs_error": 3.874301910400391e-06,
+      "mean_abs_error": 7.973694664542563e-07,
+      "cosine_similarity": 0.9947413802146912,
+      "relative_error": 0.1029827308332511,
+      "pass_threshold": false,
+      "execution_time_python": 0.1521768569946289,
+      "execution_time_cpp": 0.09130611419677734,
+      "error_message": null
+    },
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "shape_(1, 64, 4096)_eps_1e-06",
+      "input_shapes": [
+        [
+          1,
+          64,
+          4096
+        ]
+      ],
+      "output_shape": [
+        1,
+        64,
+        4096
+      ],
+      "mse": 5.698968408296423e-09,
+      "max_abs_error": 0.00048828125,
+      "mean_abs_error": 2.7750254957936704e-05,
+      "cosine_similarity": 0.9999947547912598,
+      "relative_error": 7.556249636862106e-05,
+      "pass_threshold": true,
+      "execution_time_python": 0.00030994415283203125,
+      "execution_time_cpp": 0.000247955322265625,
+      "error_message": null
+    },
+    {
+      "operator_name": "Attention",
+      "test_case": "b1_s64_h4096_nh32_nkv8",
+      "input_shapes": [
+        [
+          1,
+          64,
+          4096
+        ]
+      ],
+      "output_shape": [
+        1,
+        64,
+        4096
+      ],
+      "mse": 9.927722643965353e-09,
+      "max_abs_error": 0.0003910064697265625,
+      "mean_abs_error": 7.956410991027951e-05,
+      "cosine_similarity": 0.99982088804245,
+      "relative_error": 0.018564850670147497,
+      "pass_threshold": false,
+      "execution_time_python": 0.20115256309509277,
+      "execution_time_cpp": 0.14080679416656494,
+      "error_message": null
+    },
+    {
+      "operator_name": "MLP",
+      "test_case": "b1_s64_h4096_i14336",
+      "input_shapes": [
+        [
+          1,
+          64,
+          4096
+        ]
+      ],
+      "output_shape": [
+        1,
+        64,
+        4096
+      ],
+      "mse": 9.998796495630513e-13,
+      "max_abs_error": 3.933906555175781e-06,
+      "mean_abs_error": 7.976063898240682e-07,
+      "cosine_similarity": 0.9945766925811768,
+      "relative_error": 0.10420212707982165,
+      "pass_threshold": false,
+      "execution_time_python": 0.7849891185760498,
+      "execution_time_cpp": 0.47099347114562984,
+      "error_message": null
+    }
+  ],
+  "overall_success": false,
+  "total_tests": 9,
+  "tests_passed": 4,
+  "tests_failed": 5
+}

@@ -53,7 +53,27 @@ class JiugeMetaCStruct(ctypes.Structure):
     ]
 
 
-# Define the JiugeWeights struct
+class Qwen3MetaCStruct(ctypes.Structure):
+    """Qwen3-specific metadata structure with additional fields"""
+    _fields_ = [
+        ("dt_logits", DataType),
+        ("nlayer", c_size_t),
+        ("d", c_size_t),
+        ("nh", c_size_t),
+        ("nkvh", c_size_t),
+        ("dh", c_size_t),
+        ("di", c_size_t),
+        ("dctx", c_size_t),
+        ("dvoc", c_size_t),
+        ("epsilon", c_float),
+        ("theta", c_float),
+        ("end_token", c_uint),
+        # Qwen3-specific fields
+        ("sliding_windows", POINTER(c_uint)),  # Array of sliding window sizes per layer
+        ("layer_types", POINTER(c_uint)),      # Array of attention types per layer
+    ]
+
+
 class JiugeWeightsCStruct(ctypes.Structure):
     _fields_ = [
         ("nlayer", c_size_t),
@@ -70,25 +90,6 @@ class JiugeWeightsCStruct(ctypes.Structure):
         ("ffn_norm", POINTER(c_void_p)),
         ("ffn_gate_up", POINTER(c_void_p)),
         ("ffn_down", POINTER(c_void_p)),
-    ]
-
-
-class Qwen3MetaCStruct(ctypes.Structure):
-    _fields_ = [
-        ("dt_logits", DataType),
-        ("nlayer", c_size_t),
-        ("d", c_size_t),
-        ("nh", c_size_t),
-        ("nkvh", c_size_t),
-        ("dh", c_size_t),
-        ("di", c_size_t),
-        ("dctx", c_size_t),
-        ("dvoc", c_size_t),
-        ("epsilon", c_float),
-        ("theta", c_float),
-        ("end_token", c_uint),
-        ("sliding_windows", POINTER(c_uint)),
-        ("layer_types", POINTER(c_uint)),
     ]
 
 

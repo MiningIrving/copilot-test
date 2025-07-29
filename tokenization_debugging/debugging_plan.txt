@@ -1,0 +1,43 @@
+================================================================================
+TOKENIZATION DEBUGGING PLAN
+================================================================================
+
+PHASE 1: CONFIGURATION VERIFICATION
+1. Compare tokenizer configurations between C++ and Python
+   - Verify same vocabulary file is being used
+   - Check special token definitions
+   - Verify tokenizer parameters (normalization, etc.)
+
+2. Test with identical input strings
+   - Use the test vectors created above
+   - Compare token outputs step by step
+   - Look for systematic differences
+
+PHASE 2: INPUT PROCESSING VERIFICATION
+1. Check input preprocessing pipeline
+   - Text encoding (UTF-8, etc.)
+   - Normalization steps
+   - Special character handling
+
+2. Verify tokenization algorithm
+   - BPE/SentencePiece implementation
+   - Merge rules application
+   - Unknown token handling
+
+PHASE 3: MODEL INTEGRATION VERIFICATION
+1. Check embedding lookup
+   - Verify embedding weights are loaded correctly
+   - Test specific token embeddings
+   - Compare embedding outputs for same tokens
+
+2. Verify generation pipeline
+   - Check if issue is in forward pass vs. generation
+   - Test with known good tokens
+   - Verify sampling/selection logic
+
+IMMEDIATE ACTIONS:
+1. Create minimal reproduction case with specific failing tokens
+2. Compare tokenizer outputs for identical input
+3. Test embedding lookups for tokens 101325, 101283, 151645
+4. Verify model configuration consistency
+5. Check if C++ is using a different model/weights than Python

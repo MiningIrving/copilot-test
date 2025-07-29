@@ -1,0 +1,271 @@
+{
+  "test_results": [
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "b1_s16_h128",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        128
+      ],
+      "python_execution_time": 0.0004343986511230469,
+      "theoretical_ops": 8192,
+      "error_message": null
+    },
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "b1_s32_h2048",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "python_execution_time": 0.000522613525390625,
+      "theoretical_ops": 262144,
+      "error_message": null
+    },
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "b1_s64_h4096",
+      "input_shapes": [
+        [
+          1,
+          64,
+          4096
+        ]
+      ],
+      "output_shape": [
+        1,
+        64,
+        4096
+      ],
+      "python_execution_time": 0.0014507770538330078,
+      "theoretical_ops": 1048576,
+      "error_message": null
+    },
+    {
+      "operator_name": "RMSNorm",
+      "test_case": "b16_s128_h2048",
+      "input_shapes": [
+        [
+          16,
+          128,
+          2048
+        ]
+      ],
+      "output_shape": [
+        16,
+        128,
+        2048
+      ],
+      "python_execution_time": 0.008796215057373047,
+      "theoretical_ops": 16777216,
+      "error_message": null
+    },
+    {
+      "operator_name": "Linear",
+      "test_case": "b1_s16_128to512_biasTrue",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        512
+      ],
+      "python_execution_time": 0.0003466606140136719,
+      "theoretical_ops": 2105344,
+      "error_message": null
+    },
+    {
+      "operator_name": "Linear",
+      "test_case": "b1_s32_2048to2048_biasTrue",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "python_execution_time": 0.009618759155273438,
+      "theoretical_ops": 268500992,
+      "error_message": null
+    },
+    {
+      "operator_name": "Linear",
+      "test_case": "b1_s32_2048to16384_biasFalse",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        16384
+      ],
+      "python_execution_time": 0.07626938819885254,
+      "theoretical_ops": 2147483648,
+      "error_message": null
+    },
+    {
+      "operator_name": "Linear",
+      "test_case": "b1_s32_16384to2048_biasFalse",
+      "input_shapes": [
+        [
+          1,
+          32,
+          16384
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "python_execution_time": 0.07311081886291504,
+      "theoretical_ops": 2147483648,
+      "error_message": null
+    },
+    {
+      "operator_name": "Linear",
+      "test_case": "b16_s128_2048to2048_biasTrue",
+      "input_shapes": [
+        [
+          16,
+          128,
+          2048
+        ]
+      ],
+      "output_shape": [
+        16,
+        128,
+        2048
+      ],
+      "python_execution_time": 0.6133556365966797,
+      "theoretical_ops": 17184063488,
+      "error_message": null
+    },
+    {
+      "operator_name": "SwiGLU",
+      "test_case": "b1_s16_128h512",
+      "input_shapes": [
+        [
+          1,
+          16,
+          128
+        ]
+      ],
+      "output_shape": [
+        1,
+        16,
+        128
+      ],
+      "python_execution_time": 0.0005605220794677734,
+      "theoretical_ops": 6307840,
+      "error_message": null
+    },
+    {
+      "operator_name": "SwiGLU",
+      "test_case": "b1_s32_2048h11008",
+      "input_shapes": [
+        [
+          1,
+          32,
+          2048
+        ]
+      ],
+      "output_shape": [
+        1,
+        32,
+        2048
+      ],
+      "python_execution_time": 0.15285873413085938,
+      "theoretical_ops": 4329226240,
+      "error_message": null
+    },
+    {
+      "operator_name": "SwiGLU",
+      "test_case": "b1_s64_4096h14336",
+      "input_shapes": [
+        [
+          1,
+          64,
+          4096
+        ]
+      ],
+      "output_shape": [
+        1,
+        64,
+        4096
+      ],
+      "python_execution_time": 0.7771425247192383,
+      "theoretical_ops": 22550413312,
+      "error_message": null
+    },
+    {
+      "operator_name": "SwiGLU",
+      "test_case": "b8_s128_2048h11008",
+      "input_shapes": [
+        [
+          8,
+          128,
+          2048
+        ]
+      ],
+      "output_shape": [
+        8,
+        128,
+        2048
+      ],
+      "python_execution_time": 4.90346622467041,
+      "theoretical_ops": 138535239680,
+      "error_message": null
+    }
+  ],
+  "summary": {
+    "total_tests": 13,
+    "passed": 13,
+    "failed": 0,
+    "existing_tests_available": [
+      "Available: rms_norm.py",
+      "Available: gemm.py",
+      "Available: linear.py",
+      "Available: swiglu.py",
+      "Available: attention.py"
+    ],
+    "test_vectors_created": [
+      "small_values",
+      "large_values",
+      "alternating_pattern",
+      "zeros",
+      "ones",
+      "near_zero"
+    ]
+  }
+}

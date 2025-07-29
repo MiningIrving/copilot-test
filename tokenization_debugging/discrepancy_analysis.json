@@ -1,0 +1,18 @@
+{
+  "cpp_tokens": [
+    101325,
+    101283
+  ],
+  "python_tokens": [
+    151645,
+    151645
+  ],
+  "vocab_size": 151936,
+  "hypotheses": [
+    "tokenizer_config_mismatch",
+    "input_preprocessing_difference",
+    "special_token_handling",
+    "weight_loading_issues",
+    "architecture_config_mismatch"
+  ]
+}

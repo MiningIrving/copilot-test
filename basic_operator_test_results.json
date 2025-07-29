@@ -15,7 +15,7 @@
         16,
         128
       ],
-      "python_execution_time": 0.00040078163146972656,
+      "python_execution_time": 0.0004343986511230469,
       "theoretical_ops": 8192,
       "error_message": null
     },
@@ -34,7 +34,7 @@
         32,
         2048
       ],
-      "python_execution_time": 0.0004582405090332031,
+      "python_execution_time": 0.000522613525390625,
       "theoretical_ops": 262144,
       "error_message": null
     },
@@ -53,7 +53,7 @@
         64,
         4096
       ],
-      "python_execution_time": 0.0013833045959472656,
+      "python_execution_time": 0.0014507770538330078,
       "theoretical_ops": 1048576,
       "error_message": null
     },
@@ -72,7 +72,7 @@
         128,
         2048
       ],
-      "python_execution_time": 0.00830984115600586,
+      "python_execution_time": 0.008796215057373047,
       "theoretical_ops": 16777216,
       "error_message": null
     },
@@ -91,7 +91,7 @@
         16,
         512
       ],
-      "python_execution_time": 0.0003445148468017578,
+      "python_execution_time": 0.0003466606140136719,
       "theoretical_ops": 2105344,
       "error_message": null
     },
@@ -110,7 +110,7 @@
         32,
         2048
       ],
-      "python_execution_time": 0.009641885757446289,
+      "python_execution_time": 0.009618759155273438,
       "theoretical_ops": 268500992,
       "error_message": null
     },
@@ -129,7 +129,7 @@
         32,
         16384
       ],
-      "python_execution_time": 0.07700562477111816,
+      "python_execution_time": 0.07626938819885254,
       "theoretical_ops": 2147483648,
       "error_message": null
     },
@@ -148,7 +148,7 @@
         32,
         2048
       ],
-      "python_execution_time": 0.07331538200378418,
+      "python_execution_time": 0.07311081886291504,
       "theoretical_ops": 2147483648,
       "error_message": null
     },
@@ -167,7 +167,7 @@
         128,
         2048
       ],
-      "python_execution_time": 0.6104753017425537,
+      "python_execution_time": 0.6133556365966797,
       "theoretical_ops": 17184063488,
       "error_message": null
     },
@@ -186,7 +186,7 @@
         16,
         128
       ],
-      "python_execution_time": 0.0005815029144287109,
+      "python_execution_time": 0.0005605220794677734,
       "theoretical_ops": 6307840,
       "error_message": null
     },
@@ -205,7 +205,7 @@
         32,
         2048
       ],
-      "python_execution_time": 0.15247702598571777,
+      "python_execution_time": 0.15285873413085938,
       "theoretical_ops": 4329226240,
       "error_message": null
     },
@@ -224,7 +224,7 @@
         64,
         4096
       ],
-      "python_execution_time": 0.7818248271942139,
+      "python_execution_time": 0.7771425247192383,
       "theoretical_ops": 22550413312,
       "error_message": null
     },
@@ -243,7 +243,7 @@
         128,
         2048
       ],
-      "python_execution_time": 4.863274335861206,
+      "python_execution_time": 4.90346622467041,
       "theoretical_ops": 138535239680,
       "error_message": null
     }

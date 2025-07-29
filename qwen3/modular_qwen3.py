@@ -49,7 +49,31 @@ _CHECKPOINT_FOR_DOC = "Qwen/Qwen3-8B"
 
 
 class Qwen3RMSNorm(Qwen2RMSNorm):
-    pass
+    """Enhanced RMSNorm with better dtype handling for Qwen3"""
+    
+    def forward(self, hidden_states):
+        input_dtype = hidden_states.dtype
+        
+        # Ensure weight parameter matches input dtype when possible
+        weight = self.weight
+        if weight.dtype != input_dtype and input_dtype in [torch.float16, torch.bfloat16, torch.float32]:
+            weight = weight.to(input_dtype)
+        
+        # Use appropriate precision for computation
+        if input_dtype == torch.float32:
+            # Use input precision for float32
+            hidden_states_compute = hidden_states
+        else:
+            # Use float32 for higher precision with half-precision inputs
+            hidden_states_compute = hidden_states.to(torch.float32)
+        
+        # Compute RMS normalization
+        variance = hidden_states_compute.pow(2).mean(-1, keepdim=True)
+        hidden_states_norm = hidden_states_compute * torch.rsqrt(variance + self.variance_epsilon)
+        
+        # Apply weight and return in original dtype
+        result = weight.to(hidden_states_norm.dtype) * hidden_states_norm
+        return result.to(input_dtype)
 
 
 class Qwen3MLP(GemmaMLP):
@@ -74,10 +98,21 @@ class Qwen3Attention(LlamaAttention):
     ) -> tuple[torch.Tensor, Optional[torch.Tensor], Optional[tuple[torch.Tensor]]]:
         input_shape = hidden_states.shape[:-1]
         hidden_shape = (*input_shape, -1, self.head_dim)
+        input_dtype = hidden_states.dtype
 
-        query_states = self.q_norm(self.q_proj(hidden_states).view(hidden_shape)).transpose(1, 2)
-        key_states = self.k_norm(self.k_proj(hidden_states).view(hidden_shape)).transpose(1, 2)
-        value_states = self.v_proj(hidden_states).view(hidden_shape).transpose(1, 2)
+        # Project Q, K, V and ensure dtype consistency
+        query_states = self.q_proj(hidden_states).view(hidden_shape)
+        key_states = self.k_proj(hidden_states).view(hidden_shape)
+        value_states = self.v_proj(hidden_states).view(hidden_shape)
+        
+        # Apply Q/K normalization with proper dtype handling
+        query_states = self.q_norm(query_states.to(self.q_norm.weight.dtype)).to(input_dtype)
+        key_states = self.k_norm(key_states.to(self.k_norm.weight.dtype)).to(input_dtype)
+        
+        # Transpose after normalization
+        query_states = query_states.transpose(1, 2)
+        key_states = key_states.transpose(1, 2)
+        value_states = value_states.transpose(1, 2)
 
         cos, sin = position_embeddings
         query_states, key_states = apply_rotary_pos_emb(query_states, key_states, cos, sin)

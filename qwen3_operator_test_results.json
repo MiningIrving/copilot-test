@@ -19,10 +19,10 @@
       "max_abs_error": 0.00048828125,
       "mean_abs_error": 2.973078517243266e-05,
       "cosine_similarity": 0.9999998807907104,
-      "relative_error": 7.991421418100242e-05,
+      "relative_error": 7.991368604406793e-05,
       "pass_threshold": true,
-      "execution_time_python": 0.0002567768096923828,
-      "execution_time_cpp": 0.00020542144775390626,
+      "execution_time_python": 0.00027942657470703125,
+      "execution_time_cpp": 0.000223541259765625,
       "error_message": null
     },
     {
@@ -36,17 +36,19 @@
         ]
       ],
       "output_shape": [
-        0
+        1,
+        16,
+        128
       ],
-      "mse": Infinity,
-      "max_abs_error": Infinity,
-      "mean_abs_error": Infinity,
-      "cosine_similarity": 0.0,
-      "relative_error": Infinity,
-      "pass_threshold": false,
-      "execution_time_python": 0.0,
-      "execution_time_cpp": 0.0,
-      "error_message": "expected m1 and m2 to have the same dtype, but got: float != c10::Half"
+      "mse": 9.610616302779817e-09,
+      "max_abs_error": 0.000370025634765625,
+      "mean_abs_error": 7.745772018097341e-05,
+      "cosine_similarity": 0.9999954700469971,
+      "relative_error": 0.002969688923159444,
+      "pass_threshold": true,
+      "execution_time_python": 0.0008325576782226562,
+      "execution_time_cpp": 0.0005827903747558593,
+      "error_message": null
     },
     {
       "operator_name": "MLP",
@@ -69,8 +71,8 @@
       "cosine_similarity": 0.10023141652345657,
       "relative_error": 9.851560122451364,
       "pass_threshold": false,
-      "execution_time_python": 0.0005373954772949219,
-      "execution_time_cpp": 0.0003224372863769531,
+      "execution_time_python": 0.0005061626434326172,
+      "execution_time_cpp": 0.0003036975860595703,
       "error_message": null
     },
     {
@@ -88,14 +90,14 @@
         32,
         2048
       ],
-      "mse": 5.788618473445695e-09,
+      "mse": 5.788655776939322e-09,
       "max_abs_error": 0.00048828125,
-      "mean_abs_error": 2.7936152037000284e-05,
-      "cosine_similarity": 0.9999973773956299,
-      "relative_error": 7.631323660584974e-05,
+      "mean_abs_error": 2.7934936952078715e-05,
+      "cosine_similarity": 0.9999971389770508,
+      "relative_error": 7.631339075355263e-05,
       "pass_threshold": true,
-      "execution_time_python": 0.0002315044403076172,
-      "execution_time_cpp": 0.00018520355224609377,
+      "execution_time_python": 0.000331878662109375,
+      "execution_time_cpp": 0.00026550292968750003,
       "error_message": null
     },
     {
@@ -109,17 +111,19 @@
         ]
       ],
       "output_shape": [
-        0
+        1,
+        32,
+        2048
       ],
-      "mse": Infinity,
-      "max_abs_error": Infinity,
-      "mean_abs_error": Infinity,
-      "cosine_similarity": 0.0,
-      "relative_error": Infinity,
+      "mse": 9.937998868281284e-09,
+      "max_abs_error": 0.00038909912109375,
+      "mean_abs_error": 7.946272671688348e-05,
+      "cosine_similarity": 0.9999122619628906,
+      "relative_error": 0.013014031787420279,
       "pass_threshold": false,
-      "execution_time_python": 0.0,
-      "execution_time_cpp": 0.0,
-      "error_message": "expected m1 and m2 to have the same dtype, but got: float != c10::Half"
+      "execution_time_python": 0.04635000228881836,
+      "execution_time_cpp": 0.03244500160217285,
+      "error_message": null
     },
     {
       "operator_name": "MLP",
@@ -142,8 +146,8 @@
       "cosine_similarity": 0.09278412163257599,
       "relative_error": 10.296853252990617,
       "pass_threshold": false,
-      "execution_time_python": 0.15230655670166016,
-      "execution_time_cpp": 0.0913839340209961,
+      "execution_time_python": 0.15228891372680664,
+      "execution_time_cpp": 0.09137334823608398,
       "error_message": null
     },
     {
@@ -161,14 +165,14 @@
         64,
         4096
       ],
-      "mse": 5.698968408296423e-09,
+      "mse": 5.697382121638839e-09,
       "max_abs_error": 0.00048828125,
-      "mean_abs_error": 2.7750254957936704e-05,
+      "mean_abs_error": 2.7744750696001574e-05,
       "cosine_similarity": 0.9999947547912598,
-      "relative_error": 7.556249636862106e-05,
+      "relative_error": 7.555169603477767e-05,
       "pass_threshold": true,
-      "execution_time_python": 0.0003428459167480469,
-      "execution_time_cpp": 0.0002742767333984375,
+      "execution_time_python": 0.0004086494445800781,
+      "execution_time_cpp": 0.0003269195556640625,
       "error_message": null
     },
     {
@@ -182,17 +186,19 @@
         ]
       ],
       "output_shape": [
-        0
+        1,
+        64,
+        4096
       ],
-      "mse": Infinity,
-      "max_abs_error": Infinity,
-      "mean_abs_error": Infinity,
-      "cosine_similarity": 0.0,
-      "relative_error": Infinity,
+      "mse": 9.927711985824317e-09,
+      "max_abs_error": 0.0003910064697265625,
+      "mean_abs_error": 7.956409535836428e-05,
+      "cosine_similarity": 0.99982088804245,
+      "relative_error": 0.018564840589607782,
       "pass_threshold": false,
-      "execution_time_python": 0.0,
-      "execution_time_cpp": 0.0,
-      "error_message": "expected m1 and m2 to have the same dtype, but got: float != c10::Half"
+      "execution_time_python": 0.20119190216064453,
+      "execution_time_cpp": 0.14083433151245117,
+      "error_message": null
     },
     {
       "operator_name": "MLP",
@@ -215,13 +221,13 @@
       "cosine_similarity": 0.09553737938404083,
       "relative_error": 10.418808681761165,
       "pass_threshold": false,
-      "execution_time_python": 0.7800424098968506,
-      "execution_time_cpp": 0.46802544593811035,
+      "execution_time_python": 0.7777400016784668,
+      "execution_time_cpp": 0.46664400100708003,
       "error_message": null
     }
   ],
   "overall_success": false,
   "total_tests": 9,
-  "tests_passed": 3,
-  "tests_failed": 6
+  "tests_passed": 4,
+  "tests_failed": 5
 }

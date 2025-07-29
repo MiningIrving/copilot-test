@@ -1,0 +1,47 @@
+{
+  "model_type": "qwen3",
+  "vocab_size": 151936,
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "auto_map": {
+    "AutoTokenizer": [
+      "tokenization_qwen3.Qwen3TokenizerFast",
+      null
+    ]
+  },
+  "bos_token": {
+    "__type": "AddedToken",
+    "content": "<|endoftext|>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "eos_token": {
+    "__type": "AddedToken",
+    "content": "<|endoftext|>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "pad_token": {
+    "__type": "AddedToken",
+    "content": "<|endoftext|>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "unk_token": {
+    "__type": "AddedToken",
+    "content": "<|endoftext|>",
+    "lstrip": false,
+    "normalized": false,
+    "rstrip": false,
+    "single_word": false
+  },
+  "clean_up_tokenization_spaces": false,
+  "split_special_tokens": false,
+  "tokenizer_type": "tiktoken",
+  "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}"
+}

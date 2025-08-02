@@ -1,0 +1,166 @@
+{
+  "test_000": {
+    "input_string": "Hello",
+    "description": "Test case 0: 'Hello'",
+    "expected_issues": []
+  },
+  "test_001": {
+    "input_string": "Hello world",
+    "description": "Test case 1: 'Hello world'",
+    "expected_issues": []
+  },
+  "test_002": {
+    "input_string": "Hello, world!",
+    "description": "Test case 2: 'Hello, world!'",
+    "expected_issues": []
+  },
+  "test_003": {
+    "input_string": "\u4f60\u597d",
+    "description": "Test case 3: '\u4f60\u597d'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_004": {
+    "input_string": "\u4f60\u597d\u4e16\u754c",
+    "description": "Test case 4: '\u4f60\u597d\u4e16\u754c'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_005": {
+    "input_string": "Hello \u4f60\u597d",
+    "description": "Test case 5: 'Hello \u4f60\u597d'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_006": {
+    "input_string": "",
+    "description": "Test case 6: ''",
+    "expected_issues": [
+      "empty_string"
+    ]
+  },
+  "test_007": {
+    "input_string": " ",
+    "description": "Test case 7: ' '",
+    "expected_issues": [
+      "whitespace_only"
+    ]
+  },
+  "test_008": {
+    "input_string": "\t",
+    "description": "Test case 8: '\\t'",
+    "expected_issues": [
+      "whitespace_only"
+    ]
+  },
+  "test_009": {
+    "input_string": "\n",
+    "description": "Test case 9: '\\n'",
+    "expected_issues": [
+      "whitespace_only"
+    ]
+  },
+  "test_010": {
+    "input_string": "123",
+    "description": "Test case 10: '123'",
+    "expected_issues": []
+  },
+  "test_011": {
+    "input_string": "!@#$%^&*()",
+    "description": "Test case 11: '!@#$%^&*()'",
+    "expected_issues": []
+  },
+  "test_012": {
+    "input_string": "\u0000",
+    "description": "Test case 12: '\\x00'",
+    "expected_issues": []
+  },
+  "test_013": {
+    "input_string": "\uffff",
+    "description": "Test case 13: '\\uffff'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_014": {
+    "input_string": "\ud835\udd73\ud835\udd8a\ud835\udd91\ud835\udd91\ud835\udd94",
+    "description": "Test case 14: '\ud835\udd73\ud835\udd8a\ud835\udd91\ud835\udd91\ud835\udd94'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_015": {
+    "input_string": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "description": "Test case 15: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA...",
+    "expected_issues": [
+      "long_string"
+    ]
+  },
+  "test_016": {
+    "input_string": "\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d",
+    "description": "Test case 16: '\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60\u597d\u4f60...",
+    "expected_issues": [
+      "long_string",
+      "non_ascii"
+    ]
+  },
+  "test_017": {
+    "input_string": "Hello\u4e16\u754c123!@#",
+    "description": "Test case 17: 'Hello\u4e16\u754c123!@#'",
+    "expected_issues": [
+      "non_ascii"
+    ]
+  },
+  "test_018": {
+    "input_string": "<|endoftext|>",
+    "description": "Test case 18: '<|endoftext|>'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_019": {
+    "input_string": "<|im_start|>",
+    "description": "Test case 19: '<|im_start|>'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_020": {
+    "input_string": "<|im_end|>",
+    "description": "Test case 20: '<|im_end|>'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_021": {
+    "input_string": "[CLS]",
+    "description": "Test case 21: '[CLS]'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_022": {
+    "input_string": "[SEP]",
+    "description": "Test case 22: '[SEP]'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_023": {
+    "input_string": "[MASK]",
+    "description": "Test case 23: '[MASK]'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  },
+  "test_024": {
+    "input_string": "[UNK]",
+    "description": "Test case 24: '[UNK]'",
+    "expected_issues": [
+      "special_tokens"
+    ]
+  }
+}

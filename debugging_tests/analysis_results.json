@@ -1,0 +1,34 @@
+{
+  "tokenization_status": false,
+  "token_matches": [
+    false,
+    false
+  ],
+  "generation_outputs_match": false,
+  "word_overlap_scores": [
+    0.0,
+    0.0
+  ],
+  "cpp_vs_python_time_ratio": 13364.401162790698,
+  "identified_issues": [
+    "Tokenization failing - fundamental input processing issue",
+    "No token matches - complete output divergence from first step",
+    "Generation outputs completely different",
+    "Zero word overlap - outputs are completely unrelated",
+    "C++ implementation much slower than expected"
+  ],
+  "recommended_tests": [
+    "Test tokenizer configuration consistency",
+    "Verify input preprocessing steps",
+    "Check encoding/decoding pipelines",
+    "Test embedding layer with identical inputs",
+    "Verify model weight loading",
+    "Check first transformer layer computation",
+    "Test final layer normalization",
+    "Verify logits computation",
+    "Check sampling/generation logic",
+    "Run layer-by-layer output comparison",
+    "Test individual operators (RMSNorm, Attention, MLP)",
+    "Verify numerical precision settings"
+  ]
+}
